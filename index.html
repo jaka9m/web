@@ -26,52 +26,41 @@
 
 <style>
 :root {
-    /* Warna Utama */
-    --primary: #6a11cb;
-    --primary-dark: #4f46e5;
-    --primary-light: #a0a0ff;
-    --secondary: #2575fc;
-    --secondary-dark: #1e40af;
-    --accent: #ff6b6b;
-    --success-color: #38ef7d;
+            /* Warna Utama */
+            --primary: #6a11cb;
+            --primary-dark: #4f46e5;
+            --secondary: #2575fc;
+            --accent: #ff6b6b;
+            /* Mode Gelap & Latar Belakang */
+            --dark: #0f0c29;
+            --dark-bg: #0f0c29;
+            --dark-bg-gradient-1: #302b63;
+            --dark-bg-gradient-2: #24243e;
+            --card-bg: rgba(15, 14, 32, 0.9);
+            --element-bg: rgba(15, 23, 42, 0.6);
+            --element-bg-hover: rgba(15, 23, 42, 0.8);
+            /* Teks & Batas */
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0ff;
+            --gray-light: #a0a0ff;
+            --border-color: rgba(106, 17, 203, 0.2);
+            /* Ukuran & Transisi */
+            --border-radius-sm: 8px;
+            --border-radius-md: 12px;
+            --transition-normal: all 0.3s ease;
+            /* Bayangan & Efek */
+            --card-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+            --shadow-inset-light: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
+            --shadow-3d: 5px 5px 10px rgba(0,0,0,0.5), -5px -5px 10px rgba(50, 50, 50, 0.1);
+            --glow-primary: 0 0 10px rgba(106, 17, 203, 0.5), 0 0 20px rgba(106, 17, 203, 0.2);
+        }
 
-    /* Mode Gelap & Latar Belakang */
-    --dark: #0f0c29;
-    --dark-light: #302b63;
-    --dark-bg: #0f0c29;
-    --dark-bg-gradient-1: #302b63;
-    --dark-bg-gradient-2: #24243e;
-    --card-bg: rgba(15, 14, 32, 0.9);
-    --element-bg: rgba(15, 23, 42, 0.6);
-    --element-bg-hover: rgba(15, 23, 42, 0.8);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Teks & Batas */
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0ff;
-    --text-muted: rgba(255, 255, 255, 0.5);
-    --gray: #64748b;
-    --gray-light: #a0a0ff;
-    --gray-dark: #334155;
-    --border-color: rgba(106, 17, 203, 0.2);
-
-    /* Ukuran & Transisi */
-    --border-radius-sm: 8px;
-    --border-radius-md: 12px;
-    --border-radius-lg: 16px;
-    --border-radius-full: 9999px;
-    --transition-normal: all 0.3s ease;
-    --transition-slow: all 0.5s ease;
-
-    /* Bayangan & Efek */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --glow-primary: 0 0 10px rgba(106, 17, 203, 0.5), 0 0 20px rgba(106, 17, 203, 0.2);
-    --glow-secondary: 0 0 15px rgba(37, 117, 252, 0.5);
-    --card-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-    --shadow-inset-light: inset 2px 2px 5px rgba(0, 0, 0, 0.5);
-    --shadow-3d: 5px 5px 10px rgba(0,0,0,0.5), -5px -5px 10px rgba(50, 50, 50, 0.1);
-}
 
 * {
     margin: 0;
@@ -80,36 +69,41 @@
 }
 
 body {
-    font-family: "Rajdhani", sans-serif;
-    line-height: 1.6;
-    color: var(--text-primary);
-    background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-gradient-1), var(--dark-bg-gradient-2));
-    background-attachment: fixed;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-    padding: 1rem 0;
-}
+            /* Mengganti "Rajdhani" yang tidak ada di link font dengan "Inter" */
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg-gradient-1), var(--dark-bg-gradient-2));
+            background-attachment: fixed;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 1rem 0;
+            background-image: url('https://picsum.photos/1920/1080?random=1');
+        background-size: cover;
+        background-attachment: fixed;
+        perspective: 1500px;
+        }
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.15) 0%, transparent 40%);
-    z-index: -1;
-}
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(106, 17, 203, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(37, 117, 252, 0.15) 0%, transparent 40%);
+            z-index: -1;
+        }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; border: none; outline: none; background: none; }
+        ul, ol { list-style: none; }
+
 
 button {
     cursor: pointer;
@@ -123,43 +117,42 @@ ul, ol {
 }
 
 .container {
-    width: 100%;
-    max-width: 480px;
-    padding: 0 0.75rem;
-    margin-bottom: 1rem;
-}
+            width: 100%;
+            max-width: 480px;
+            padding: 0 0.75rem;
+            margin-bottom: 1rem;
+        }
 
 .card {
-    background: var(--card-bg);
-    border-radius: var(--border-radius-md);
-    padding: 1.5rem;
-    box-shadow: var(--card-shadow);
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(106, 17, 203, 0.1);
-    width: 100%;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
-}
-
-.card::after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, rgba(106, 17, 203, 0.5), rgba(37, 117, 252, 0.5), rgba(255, 107, 107, 0.5));
-    filter: blur(1px);
-}
+            background: var(--card-bg);
+            border-radius: var(--border-radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(106, 17, 203, 0.1);
+            width: 100%;
+            /* Efek 3D Tambahan (Digabungkan dari styles di bawah) */
+            transform: translateZ(20px);
+            /* Menghapus pseudo-element card::before dan card::after karena sudah ada style border/shadow yang lebih kuat */
+        }
+        
+        /* Mengganti Card dengan Style main-container 3D yang lebih kuat */
+        .card {
+            background: rgba(30, 41, 59, 0.8); /* background: var(--card-bg) diganti */
+            backdrop-filter: blur(8px);
+            border-radius: 1.5rem; /* var(--border-radius-md) diganti */
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 
+                        0 0 15px rgba(102, 181, 232, 0.2) inset, 
+                        0 0 5px rgba(0, 0, 0, 0.5); /* var(--card-shadow) diganti */
+            border: 1px solid rgba(100, 116, 139, 0.4); /* border diganti */
+            padding: 2rem; /* padding: 1.5rem diganti */
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            transform: translateZ(20px);
+        }
 
 .title-container {
     text-align: center;
@@ -232,11 +225,14 @@ ul, ol {
     transform: translateY(-2px) scale(1.05);
 }
 
+/* Gradien Ungu ke Biru untuk tombol aktif */
 .nav-button.active {
-    background: linear-gradient(90deg, #00ff00, #00cc33);
+    /* Menggunakan variabel --primary (ungu) dan --secondary (biru) */
+    background: linear-gradient(90deg, var(--primary), var(--secondary)); 
     color: white;
     border: none;
-    box-shadow: var(--shadow-inset-light), 0 0 10px rgba(0, 255, 0, 0.5);
+    /* Mengubah warna glow box-shadow menjadi ungu/biru */
+    box-shadow: var(--shadow-inset-light), 0 0 10px rgba(106, 17, 203, 0.5); 
     transform: translateY(0);
 }
 
@@ -290,18 +286,24 @@ ul, ol {
     display: none;
 }
 
+/* Rata Tengah pada Form Group */
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    /* TAMBAH: Meratakan item anak (label, input, dll.) ke tengah secara horizontal */
+    align-items: center; 
 }
 
 .form-group label {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--light);
+    /* Opsional: Jika Anda ingin label sendiri tidak meregang 100% dan tetap berada di tengah */
+    text-align: center;
 }
 
+/* CSS untuk tampilan 3D (Efek Cekung/Inset) */
 .converter-textarea {
     width: 100%;
     min-height: 150px;
@@ -314,15 +316,60 @@ ul, ol {
     font-size: 0.85rem;
     resize: vertical;
     transition: var(--transition-normal);
-    box-shadow: var(--shadow-inset-light);
+    /* UBAH: Tambahkan bayangan gelap di bagian bawah untuk efek kedalaman 3D */
+    box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.2), /* Bayangan gelap bagian dalam (kiri/atas) */
+        inset -1px -1px 3px rgba(255, 255, 255, 0.5), /* Highlight terang bagian dalam (kanan/bawah) */
+        var(--shadow-inset-light); /* Pertahankan shadow yang sudah ada */
 }
 
+/* CSS untuk tampilan 3D saat fokus (Efek Timbul) */
 .converter-textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.25), var(--shadow-inset-light);
+    /* UBAH: Tambahkan shadow luar yang kuat (glow) untuk efek timbul/diangkat */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), /* Shadow luar untuk efek terangkat */
+        0 0 0 2px var(--primary), /* Garis fokus berwarna (opsional) */
+        var(--shadow-inset-light); /* Pertahankan shadow inset lembut untuk latar */
     background: var(--element-bg-hover);
 }
+
+.config-select {
+    width: 100%;
+    background: var(--element-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    color: var(--text-primary);
+    padding: 0.8rem;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.85rem;
+    transition: var(--transition-normal);
+    box-shadow: 
+        inset 1px 1px 3px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 3px rgba(255, 255, 255, 0.5),
+        var(--shadow-inset-light);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23a0a0ff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.6-3.6%205.4-7.9%205.4-12.9%200-4.9-1.8-9.2-5.5-12.7z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 0.8em;
+    padding-right: 2.5rem;
+    height: auto;
+}
+
+.config-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 0 0 2px var(--primary),
+        var(--shadow-inset-light);
+    background-color: var(--element-bg-hover);
+}
+
 .converter-textarea::placeholder {
     color: var(--text-secondary);
     opacity: 0.6;
@@ -364,11 +411,6 @@ ul, ol {
     color: var(--gray-light);
 }
 
-.option-selector {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
 
 .option-btn {
     background: var(--element-bg);
@@ -398,7 +440,8 @@ ul, ol {
     color: white;
     border: none;
     border-radius: var(--border-radius-sm);
-    padding: 0.8rem;
+    /* UBAH: Mengurangi padding atas/bawah menjadi 0.5rem (lebih ramping) dan menambah padding kiri/kanan menjadi 1rem */
+    padding: 0.5rem 1rem; 
     font-weight: 600;
     font-size: 1rem;
     display: flex;
@@ -430,6 +473,7 @@ ul, ol {
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
 
 .result-header {
     display: flex;
@@ -704,11 +748,30 @@ ul, ol {
     .converter-textarea {
         min-height: 120px;
     }
+    
     .option-selector {
-        flex-direction: row;
-        flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* TAMBAH: Rata Tengah Horizontal (untuk item flex) */
+    justify-content: center; 
+    /* TAMBAH: Jarak atas/bawah agar terlihat rapi */
+    margin: 0.5rem auto; 
+    /* TAMBAH: Pastikan tidak terlalu lebar pada layar besar */
+    max-width: 100%; 
+}
+
+/* Media Query Responsif (untuk layar sedang/kecil) */
+@media (max-width: 600px) {
+    .option-selector {
+        /* Properti ini sebenarnya sudah didefinisikan di atas dan tidak perlu diulang */
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */ 
+        /* Pastikan item tetap rata tengah pada layar kecil */
+        justify-content: center; 
     }
     .option-btn {
+        /* Ukuran tombol lebih kecil pada layar sempit */
         font-size: 0.7rem;
         padding: 0.3rem 0.6rem;
     }
@@ -730,7 +793,7 @@ ul, ol {
                     <i class="fas fa-home"></i> Home
                 </a>
                 <a href="https://gamang.gpj2.dpdns.org/kuota" class="nav-button">
-                    <i class="fas fa-link"></i> Cek Kuota
+                    <i class="fas fa-signal"></i> Cek Kuota
                 </a>
                 <a href="https://gamang.gpj2.dpdns.org/convert" class="nav-button active">
                     <i class="fas fa-exchange-alt"></i> Converter
@@ -787,11 +850,11 @@ ul, ol {
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Configuration Type</label>
-                        <div class="config-type-selector">
-                            <button id="minimal-config" class="format-btn active">Minimal (Proxies Only)</button>
-                            <button id="full-config" class="format-btn">Full Configuration</button>
-                        </div>
+                        <label for="config-type-select">Configuration Type</label>
+                        <select id="config-type-select" class="config-select">
+                            <option value="minimal">Minimal (Proxies Only)</option>
+                            <option value="full">Full Configuration</option>
+                        </select>
                     </div>
                     <button id="convert-v2ray" class="convert-btn">
                         <i class="fas fa-sync-alt"></i> Convert
@@ -822,11 +885,11 @@ ul, ol {
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Configuration Type</label>
-                        <div class="config-type-selector">
-                            <button id="minimal-config-reverse" class="format-btn active">Minimal (Proxies Only)</button>
-                            <button id="full-config-reverse" class="format-btn">Full Configuration</button>
-                        </div>
+                        <label for="config-type-select-reverse">Configuration Type</label>
+                        <select id="config-type-select-reverse" class="config-select">
+                            <option value="minimal">Minimal (Proxies Only)</option>
+                            <option value="full">Full Configuration</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="config-input">Configuration</label>
@@ -1003,11 +1066,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const nekoboxFormatBtn = document.getElementById('nekobox-format');
     const clashTypeBtn = document.getElementById('clash-type'); // For reverse conversion
 
-    // Config type buttons
-    const minimalConfigBtn = document.getElementById('minimal-config');
-    const fullConfigBtn = document.getElementById('full-config');
-    const minimalConfigReverseBtn = document.getElementById('minimal-config-reverse');
-    const fullConfigReverseBtn = document.getElementById('full-config-reverse');
+    // Config type dropdowns
+    const configTypeSelect = document.getElementById('config-type-select');
+    const configTypeSelectReverse = document.getElementById('config-type-select-reverse');
 
     // Clash options
     const clashOptionsContainer = document.getElementById('clash-options');
@@ -1047,7 +1108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Updates button visibility based on config type.
     function updateSaveButtons() {
-        if (minimalConfigBtn.classList.contains('active')) {
+        if (configTypeSelect.value === 'minimal') {
             saveProxyProviderBtn.style.display = 'flex';
             saveFullConfigBtn.style.display = 'none';
         } else {
@@ -1083,21 +1144,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    [minimalConfigBtn, fullConfigBtn].forEach(btn => {
-        btn.addEventListener('click', () => {
-            minimalConfigBtn.classList.toggle('active', btn === minimalConfigBtn);
-            fullConfigBtn.classList.toggle('active', btn === fullConfigBtn);
-            updateSaveButtons();
-            clearError();
-        });
+    // Sync config type dropdowns
+    configTypeSelect.addEventListener('change', () => {
+        configTypeSelectReverse.value = configTypeSelect.value;
+        updateSaveButtons();
+        clearError();
     });
 
-    [minimalConfigReverseBtn, fullConfigReverseBtn].forEach(btn => {
-        btn.addEventListener('click', () => {
-            minimalConfigReverseBtn.classList.toggle('active', btn === minimalConfigReverseBtn);
-            fullConfigReverseBtn.classList.toggle('active', btn === fullConfigReverseBtn);
-            clearError();
-        });
+    configTypeSelectReverse.addEventListener('change', () => {
+        configTypeSelect.value = configTypeSelectReverse.value;
+        // No need to call updateSaveButtons here as it's tied to the first section's dropdown
+        clearError();
     });
 
 
@@ -1234,7 +1291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const proxies = linkArray.map(parseV2RayLink);
-        const isFullConfig = fullConfigBtn.classList.contains('active');
+        const isFullConfig = configTypeSelect.value === 'full';
         const useClashFormat = clashFormatBtn.classList.contains('active');
 
         if (useClashFormat) {
